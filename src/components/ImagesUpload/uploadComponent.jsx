@@ -20,6 +20,14 @@ export default class UploadComponent extends React.Component {
     this.cancel = this.cancel.bind(this);
   }
 
+  componentDidMount() {
+    UploadService.getFiles().then((response) => {
+      this.setState({
+        imageInfos: response.data,
+      });
+    });
+  }
+
   selectFiles(event) {
     let images = [];
 
@@ -119,14 +127,6 @@ export default class UploadComponent extends React.Component {
       progressInfos: [],
       message: [],
       imageInfos: [],
-    });
-  }
-
-  componentDidMount() {
-    UploadService.getFiles().then((response) => {
-      this.setState({
-        imageInfos: response.data,
-      });
     });
   }
 
