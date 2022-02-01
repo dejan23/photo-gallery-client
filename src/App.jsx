@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="bg-blue-50 h-screen w-screen sm:px-8 md:px-16 sm:py-8">
+    <div className=" px-8 py-8 sm:px-8 sm:py-8 md:py-0">
       <Navbar />
       <main className="container mx-auto max-w-screen-lg">
         <Routes>
